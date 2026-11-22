@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="id" data-house="p"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday — Wizarding Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
+<canvas id="fx"></canvas>
+<i class="cn tl">❦</i><i class="cn tr">❦</i><i class="cn bl">❦</i><i class="cn br">❦</i>
+<div id="hud" hidden>
+ <div id="houses"><button data-h="g" data-l="G" title="Gryffindor"><img src="assets/house-gryffindor.svg" alt="Gryffindor" onerror="this.remove()"></button><button data-h="s" data-l="S" title="Slytherin"><img src="assets/house-slytherin.svg" alt="Slytherin" onerror="this.remove()"></button><button data-h="r" data-l="R" title="Ravenclaw"><img src="assets/house-ravenclaw.svg" alt="Ravenclaw" onerror="this.remove()"></button><button data-h="h" data-l="H" title="Hufflepuff"><img src="assets/house-hufflepuff.svg" alt="Hufflepuff" onerror="this.remove()"></button></div>
+ <div id="chap">Chapter 1 / 8</div>
+ <button id="mute" title="Mute / Unmute">♪</button>
+</div>
+
+<section class="page on" id="p0"><div class="wrap">
+ <img class="orn" src="assets/ornament-1.svg" alt="" onerror="this.remove()">
+ <div class="nine">9¾</div>
+ <h1>Platform 9¾: The Secret Entrance</h1>
+ <p class="sub">Dinding di antara peron 9 dan 10 sudah terbuka untukmu.</p>
+ <button class="btn" id="enter">Tap Your Wand to Enter</button>
+</div></section>
+
+<section class="page" id="p1"><div class="wrap">
+ <div class="mast"><span>Vol. ∞ · Hogsmeade</span><h2>The Daily Prophet</h2><span data-f="tanggal"></span></div>
+ <div class="hero2">
+  <div class="hl">
+   <p class="kick" id="kick">Special Birthday Edition</p>
+   <h1>Selamat Ulang Tahun, <em data-f="nama"></em>!</h1>
+   <p class="lead">Penyihir paling berkilau tahun ini resmi menginjak usia <b data-f="umur"></b>. Seisi Dunia Sihir berkumpul untuk merayakannya.</p>
+   <img class="orn" src="assets/ornament-2.svg" alt="" onerror="this.remove()">
+   <button class="btn" data-go="2">Lanjut ke Chapter 2</button>
+  </div>
+  <figure class="slot" style="width:400px;height:500px" data-label="assets/hero.webp&#10;800 × 1000 px"><img src="assets/hero.webp" alt="Foto utama" onerror="this.remove()"></figure>
+ </div>
+</div></section>
+
+<section class="page" id="p2"><div class="wrap">
+ <h2>The Pensieve: Official Portrait &amp; Reviews</h2>
+ <div id="grid"></div>
+ <button class="btn" data-go="3">Lanjut ke Chapter 3</button>
+</div></section>
+
+<section class="page" id="p3"><div class="wrap">
+ <h2>The Mirror of Erised: Reflections of You</h2>
+ <div class="mirror" id="mirror">
+  <img src="assets/mirror-frame.svg" alt="" onerror="this.remove()">
+  <div class="oval"><p id="mtext">Klik cermin untuk melihat pantulanmu.</p></div>
+ </div>
+ <button class="btn" id="lumos">Lumos (Lihat Pantulan)</button>
+ <button class="btn" data-go="4">Lanjut ke Chapter 4</button>
+</div></section>
+
+<section class="page" id="p4"><div class="wrap">
+ <h2>Charms Class: Block Blast Challenge</h2>
+ <div class="gwrap">
+  <div class="panel">
+   <p>Seret balok ke papan. Penuhi baris atau kolom untuk menghancurkannya.</p>
+   <div class="stat"><span>Skor</span><b id="score">0</b></div>
+   <div class="stat"><span>High Score</span><b id="best">0</b></div>
+   <button class="btn ghost" id="restart">Main Ulang</button>
+   <button class="btn" id="unlock" data-go="5" disabled>Lanjut ke Chapter 5</button>
+   <button class="link" data-go="5">Lewati kelas (Buka langsung)</button>
+   <small>Tombol terbuka otomatis di skor 250.</small>
+  </div>
+  <canvas id="game"></canvas>
+ </div>
+</div></section>
+
+<section class="page" id="p5"><div class="wrap">
+ <h2>Trelawney’s Birthday Prophecy: Divination Class</h2>
+ <p class="sub">Pilih satu kartu. Takdir tahun barumu menunggu.</p>
+ <div id="tarot"></div>
+ <button class="btn" data-go="6">Lanjut ke Chapter 6</button>
+</div></section>
+
+<section class="page" id="p6"><div class="wrap">
+ <h2>The Great Hall Feast: Make a Wish</h2>
+ <p class="sub" id="cakehint">Klik lilin untuk meniupnya &amp; Make a Wish</p>
+ <div class="cake" id="cake">
+  <i class="plate"></i><i class="tier t1"></i><i class="tier t2"></i>
+  <i class="candle" style="left:35%"><b class="flame"></b></i><i class="candle" style="left:49%"><b class="flame"></b></i><i class="candle" style="left:63%"><b class="flame"></b></i>
+ </div>
+ <div id="wishmsg">Happy Birthday! Semoga semua harapanmu terkabul. ✦</div>
+ <button class="btn" data-go="7">Lanjut ke Chapter 7</button>
+</div></section>
+
+<section class="page" id="p7"><div class="wrap">
+ <article class="paper">
+  <header><small>Hogwarts School of Witchcraft and Wizardry</small><h3>Special Owl Delivery</h3></header>
+  <p>Kepada <b data-f="nama"></b> tersayang,</p>
+  <p>Hari ini seorang burung hantu terbang jauh hanya untuk membawa satu pesan: terima kasih sudah menjadi kamu. Tahun lalu terasa lebih terang karena ada kamu di dalamnya.</p>
+  <p>Semoga usia <span data-f="umur"></span> penuh kejutan baik, tawa yang tidak habis, dan keberanian untuk mengejar mimpi yang paling kamu inginkan. Kamu pantas mendapatkan semua keajaiban itu.</p>
+  <p>Apa pun yang terjadi, ingat bahwa ada seseorang yang selalu bangga padamu dan siap mengirim burung hantu kapan saja kamu butuh.</p>
+  <p class="sig">Dengan penuh sayang,<br><em>Penyihir yang selalu di sisimu</em></p>
+ </article>
+ <button class="btn" data-go="8">Lanjut ke Chapter 8</button>
+</div></section>
+
+<section class="page" id="p8"><div class="wrap">
+ <h2>Room of Requirement: Mystery Blind Box</h2>
+ <p class="sub" id="bbhint">Klik kotak 5 kali untuk membukanya (0 / 5)</p>
+ <div class="bb" id="bb"><i class="bx"></i><i class="lid"></i></div>
+ <div id="reveal" hidden><h3>Pengumuman Spesial ✦</h3><p>Kotak sudah terbuka! Sekarang bukalah <b>Blind Box Harry Potter</b> yang asli, sudah disiapkan khusus untukmu di dunia nyata.</p><button class="btn ghost" data-go="1">Kembali ke Sampul</button></div>
+</div></section>
+
+<div id="modal" hidden><div class="mbox"><figure class="slot" id="mph" style="height:min(56vh,440px);aspect-ratio:4/5;max-width:46vw"></figure><div><span class="score" id="msc"></span><h3 id="mti"></h3><p id="mtx"></p><button class="btn ghost" id="mx">Tutup</button></div></div></div>
+<script src="script.js"></script><script src="game.js"></script>
+</body></html>
