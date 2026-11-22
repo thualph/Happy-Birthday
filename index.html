@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="id" data-house="p"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday — Wizarding Edition</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Playfair+Display:wght@600;700;900&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head><body>
+<audio id="bgm" src="assets/music.mp3" loop preload="auto"></audio>
+<canvas id="fx"></canvas>
+<div id="frame"></div>
+<div id="rail"><div id="train"><svg viewBox="0 0 1300 200" aria-hidden="true"><path fill-rule="evenodd" d="M10 100a8 8 0 0 1 8-8H202a8 8 0 0 1 8 8V165H10ZM26 112h24v24h-24ZM62 112h24v24h-24ZM98 112h24v24h-24ZM134 112h24v24h-24ZM170 112h24v24h-24Z"/><path d="M16 92Q110 78 204 92Z"/><path d="M16 165H204V172H16Z"/><path d="M210 148h6v5h-6Z"/><path class="wheel" fill-rule="evenodd" d="M31 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM48.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM33.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path class="wheel" fill-rule="evenodd" d="M163 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM180.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM165.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path fill-rule="evenodd" d="M216 100a8 8 0 0 1 8-8H408a8 8 0 0 1 8 8V165H216ZM232 112h24v24h-24ZM268 112h24v24h-24ZM304 112h24v24h-24ZM340 112h24v24h-24ZM376 112h24v24h-24Z"/><path d="M222 92Q316 78 410 92Z"/><path d="M222 165H410V172H222Z"/><path d="M416 148h6v5h-6Z"/><path class="wheel" fill-rule="evenodd" d="M237 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM254.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM239.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path class="wheel" fill-rule="evenodd" d="M369 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM386.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM371.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path fill-rule="evenodd" d="M422 100a8 8 0 0 1 8-8H614a8 8 0 0 1 8 8V165H422ZM438 112h24v24h-24ZM474 112h24v24h-24ZM510 112h24v24h-24ZM546 112h24v24h-24ZM582 112h24v24h-24Z"/><path d="M428 92Q522 78 616 92Z"/><path d="M428 165H616V172H428Z"/><path d="M622 148h6v5h-6Z"/><path class="wheel" fill-rule="evenodd" d="M443 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM460.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM445.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path class="wheel" fill-rule="evenodd" d="M575 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM592.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM577.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path fill-rule="evenodd" d="M628 100a8 8 0 0 1 8-8H820a8 8 0 0 1 8 8V165H628ZM644 112h24v24h-24ZM680 112h24v24h-24ZM716 112h24v24h-24ZM752 112h24v24h-24ZM788 112h24v24h-24Z"/><path d="M634 92Q728 78 822 92Z"/><path d="M634 165H822V172H634Z"/><path d="M828 148h6v5h-6Z"/><path class="wheel" fill-rule="evenodd" d="M649 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM666.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM651.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path class="wheel" fill-rule="evenodd" d="M781 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM798.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM783.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><path d="M836 108L846 94L872 88L900 92L926 90L940 108Z"/><path d="M832 108H944V165H832Z"/><path class="wheel" fill-rule="evenodd" d="M848 176a14 14 0 1 0 28 0a14 14 0 1 0 -28 0ZM867.3000000000001 176a2.8 2.8 0 1 0 5.6 0a2.8 2.8 0 1 0 -5.6 0ZM851.1 176a2.8 2.8 0 1 0 5.6 0a2.8 2.8 0 1 0 -5.6 0Z"/><path class="wheel" fill-rule="evenodd" d="M906 176a14 14 0 1 0 28 0a14 14 0 1 0 -28 0ZM925.3000000000001 176a2.8 2.8 0 1 0 5.6 0a2.8 2.8 0 1 0 -5.6 0ZM909.1 176a2.8 2.8 0 1 0 5.6 0a2.8 2.8 0 1 0 -5.6 0Z"/><path fill-rule="evenodd" d="M948 62H1022V162H948Z M968 84h26v22h-26Z"/><path d="M942 54H1028V64H942Z"/><path d="M1022 96H1226a27 27 0 0 1 0 54H1022Z"/><path d="M1080 96a20 14 0 0 1 40 0Z"/><path d="M1150 96a14 10 0 0 1 28 0Z"/><path d="M1204 96L1208 66L1194 50H1236L1222 66L1226 96Z"/><path d="M948 150H1252V160H948Z"/><path d="M1248 150L1294 178H1248Z"/><path d="M1030 160H1170V166H1030Z"/><path class="wheel" fill-rule="evenodd" d="M1004 164a26 26 0 1 0 52 0a26 26 0 1 0 -52 0ZM1039.8999999999999 164a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0ZM1009.6999999999999 164a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0Z"/><path class="wheel" fill-rule="evenodd" d="M1074 164a26 26 0 1 0 52 0a26 26 0 1 0 -52 0ZM1109.8999999999999 164a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0ZM1079.7 164a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0Z"/><path class="wheel" fill-rule="evenodd" d="M1144 164a26 26 0 1 0 52 0a26 26 0 1 0 -52 0ZM1179.8999999999999 164a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0ZM1149.7 164a5.2 5.2 0 1 0 10.4 0a5.2 5.2 0 1 0 -10.4 0Z"/><path class="wheel" fill-rule="evenodd" d="M1219 177a13 13 0 1 0 26 0a13 13 0 1 0 -26 0ZM1236.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0ZM1221.9 177a2.6 2.6 0 1 0 5.2 0a2.6 2.6 0 1 0 -5.2 0Z"/><circle class="puff" cx="1215" cy="46" r="12" style="animation-delay:0s"/><circle class="puff" cx="1215" cy="46" r="12" style="animation-delay:.9s"/><circle class="puff" cx="1215" cy="46" r="12" style="animation-delay:1.8s"/></svg></div></div>
+<div id="whoosh"></div>
+<i class="cn tl">❦</i><i class="cn tr">❦</i><i class="cn bl">❦</i><i class="cn br">❦</i>
+<div id="hud" hidden>
+ <div id="chap">Chapter 1 / 8</div>
+ <div id="dock" aria-label="Pilih asrama dan suara"><div id="houses"><button data-h="g" data-l="G" title="Gryffindor"><img src="assets/house-gryffindor.svg" alt="Gryffindor" onerror="this.remove()"></button><button data-h="s" data-l="S" title="Slytherin"><img src="assets/house-slytherin.svg" alt="Slytherin" onerror="this.remove()"></button><button data-h="r" data-l="R" title="Ravenclaw"><img src="assets/house-ravenclaw.svg" alt="Ravenclaw" onerror="this.remove()"></button><button data-h="h" data-l="H" title="Hufflepuff"><img src="assets/house-hufflepuff.svg" alt="Hufflepuff" onerror="this.remove()"></button></div><button id="mute" title="Mute / Unmute">♪</button></div>
+</div>
+
+<section class="page on" id="p0"><div class="wrap">
+ <img class="orn" src="assets/ornament-1.svg" alt="" onerror="this.remove()">
+ <div class="nine">9¾</div>
+ <h1>Platform 9¾: The Secret Entrance</h1>
+ <p class="sub">Dinding di antara peron 9 dan 10 sudah terbuka untukmu.</p>
+ <button class="btn" id="enter">Tap Your Wand to Enter</button>
+</div></section>
+
+<section class="page" id="p1"><div class="wrap">
+ <header class="mast"><h2>The Daily Prophet</h2></header>
+ <div class="hero2">
+  <div class="hl">
+   <p class="kick" id="kick">Special Birthday Edition</p>
+   <h1>Selamat Ulang Tahun,<br><em data-f="nama"></em>!</h1>
+   <img class="orn" src="assets/ornament-2.svg" alt="" onerror="this.remove()">
+   <p class="date" data-f="tanggal"></p>
+   <button class="btn" data-go="2">Lanjut ke Chapter 2</button>
+  </div>
+  <figure class="slot arch" data-label="assets/hero (webp / jpg / png / gif)&#10;760 × 1000 px"><img data-base="assets/hero" alt="Foto utama"></figure>
+ </div>
+</div></section>
+
+<section class="page" id="p2"><div class="wrap">
+ <h2>The Pensieve: Official Portrait &amp; Reviews</h2>
+ <div id="grid"></div>
+ <button class="btn" data-go="3">Lanjut ke Chapter 3</button>
+</div></section>
+
+<section class="page" id="p3"><div class="wrap">
+ <h2>The Mirror of Erised: Reflections of You</h2>
+ <div class="mirror" id="mirror">
+  <img src="assets/mirror-frame.svg" alt="" onerror="this.remove()">
+  <div class="oval"><p id="mtext">Klik cermin untuk melihat pantulanmu.</p></div>
+ </div>
+ <button class="btn" id="lumos">Lumos (Lihat Pantulan)</button>
+ <button class="btn" data-go="4">Lanjut ke Chapter 4</button>
+</div></section>
+
+<section class="page" id="p4"><div class="wrap">
+ <h2>Charms Class: Block Blast Challenge</h2>
+ <div class="gwrap">
+  <div class="panel">
+   <p>Seret balok ke papan. Penuhi baris atau kolom untuk menghancurkannya.</p>
+   <div class="stat"><span>Skor</span><b id="score">0</b></div>
+   <div class="stat"><span>High Score</span><b id="best">0</b></div>
+   <div class="stat"><span>Combo</span><b id="combo">x0</b></div>
+   <button class="btn ghost" id="restart">Main Ulang</button>
+   <button class="btn" id="unlock" data-go="5" disabled>Lanjut ke Chapter 5</button>
+   <button class="link" data-go="5">Lewati kelas (Buka langsung)</button>
+   <small>Tombol terbuka otomatis di skor 250.</small>
+  </div>
+  <canvas id="game"></canvas>
+ </div>
+</div></section>
+
+<section class="page" id="p5"><div class="wrap">
+ <h2>Trelawney’s Birthday Prophecy: Divination Class</h2>
+ <p class="sub">Pilih satu kartu. Takdir tahun barumu menunggu.</p>
+ <div id="tarot"></div>
+ <button class="btn" data-go="6">Lanjut ke Chapter 6</button>
+</div></section>
+
+<section class="page" id="p6"><div class="wrap">
+ <h2>The Great Hall Feast: Make a Wish</h2>
+ <p class="sub" id="cakehint">Klik lilin untuk meniupnya &amp; Make a Wish</p>
+ <div class="cake" id="cake">
+  <i class="plate"></i><i class="tier t1"></i><i class="tier t2"></i>
+  <i class="candle" style="left:35%"><b class="flame"></b></i><i class="candle" style="left:49%"><b class="flame"></b></i><i class="candle" style="left:63%"><b class="flame"></b></i>
+ </div>
+ <div id="wishmsg">Happy Birthday! Semoga semua harapanmu terkabul. ✦</div>
+ <button class="btn" data-go="7">Lanjut ke Chapter 7</button>
+</div></section>
+
+<section class="page" id="p7"><div class="wrap">
+ <article class="paper">
+  <header><small>Hogwarts School of Witchcraft and Wizardry</small><h3>Special Owl Delivery</h3></header>
+  <p>Kepada <b data-f="nama"></b> tersayang,</p>
+  <p>Hari ini seorang burung hantu terbang jauh hanya untuk membawa satu pesan: terima kasih sudah menjadi kamu. Tahun lalu terasa lebih terang karena ada kamu di dalamnya.</p>
+  <p>Semoga usia <span data-f="umur"></span> penuh kejutan baik, tawa yang tidak habis, dan keberanian untuk mengejar mimpi yang paling kamu inginkan. Kamu pantas mendapatkan semua keajaiban itu.</p>
+  <p>Apa pun yang terjadi, ingat bahwa ada seseorang yang selalu bangga padamu dan siap mengirim burung hantu kapan saja kamu butuh.</p>
+  <p class="sig">Dengan penuh sayang,<br><em>Penyihir yang selalu di sisimu</em></p>
+ </article>
+ <button class="btn" data-go="8">Lanjut ke Chapter 8</button>
+</div></section>
+
+<section class="page" id="p8"><div class="wrap">
+ <h2>Room of Requirement: Mystery Blind Box</h2>
+ <p class="sub" id="bbhint">Klik kotak 5 kali untuk membukanya (0 / 5)</p>
+ <div class="bb" id="bb"><i class="bx"></i><i class="lid"></i></div>
+ <div id="reveal" hidden><h3>Pengumuman Spesial ✦</h3><p>Kotak sudah terbuka! Sekarang bukalah <b>Blind Box Harry Potter</b> yang asli, sudah disiapkan khusus untukmu di dunia nyata.</p><button class="btn ghost" data-go="1">Kembali ke Sampul</button></div>
+</div></section>
+
+<div id="modal" hidden><div class="mbox"><figure class="slot" id="mph" style="height:min(56vh,440px);aspect-ratio:4/5;max-width:46vw"></figure><div><span class="score" id="msc"></span><h3 id="mti"></h3><p id="mtx"></p><button class="btn ghost" id="mx">Tutup</button></div></div></div>
+<script src="script.js"></script><script src="game.js"></script>
+</body></html>
