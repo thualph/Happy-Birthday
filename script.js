@@ -2,21 +2,21 @@
 const CFG={nama:'Ais',umur:'21',tanggal:'23 November 2005'};
 const REASONS=['Ais adalah pendengar terbaik yang pernah Abby kenal.','You deserve the love of the world.','Suara my baby selalu bikin Abby luluh dan tenang','Ais adalah orang paling berani sama paling kuat di dunia ini.','Senyum my baby sangat manis seperti yupi plus karamel.','You are just never giving up, even when all things goes bad.','Ide dan saran-saran my baby selalu yang Abby nantikan.'];
 const PHOTOS=[/* [skor, judul, review, rasio placeholder untuk lightbox, ukuran tile bento: 'big' | 'tall' | 'wide' | ''] - 16 foto, foto asli dipotong (cover) di tile, lightbox menampilkan utuh */
-['10/10','Foto Pertama Ais','Ini foto pertama yang Ais kirim ke Abby','4/3','big'],
-['10/10','Pandang Pertama','Foto di telegram yang bikin Abby so crazy.','1/1',''],
-['9.9/10','Motong Rambut','Abby suka banget liat foto ini, Ais seperti bidadari.','4/5',''],
+['∞∞/10','Foto Pertama Ais','Ini foto pertama yang Ais kirim ke Abby','4/3','big'],
+['∞∞/10','Pandang Pertama','Foto di telegram yang bikin Abby so crazy.','1/1',''],
+['∞/10','Motong Rambut','Abby suka banget liat foto ini, Ais seperti bidadari.','4/5',''],
 ['👅/10','Like Sugar On My Tongue','Foto ini yang paling banyak ngabisin cairan George.','3/4','tall'],
-['10/10','Bibir Manyun','Sayang, Abby suka banget sama bibir seksi my baby.','4/3',''],
-['11/10','Selalu Cantik','Bahkan sebelum ketemu Abbypun my baby so cantik aaaa.','1/1',''],
-['10/10','Brand Ambassador','JKT48? Apa itu, ini dia Brand Ambassador Pocari Abby.','3/4','tall'],
-['9.8/10','Anniversary Day','Ini my baby di hari anniversary kita yang pertama.','4/3','big'],
-['10/10','Candid VC','Melihat my baby dari layar HP, gak ada yang lebih membuat Abby bahagia.','1/1',''],
-['10/10','Master Tiktok','Mana ada orang lain bikin Tiktok semahir cewekku?.','1/1',''],
-['9.9/10','Ms. Kacamata','Intinya kacamata, mama udahlah.','4/3',''],
-['10/10','Outfit of the Day','My baby racikan outfitnya so great, Abby sangat bangga lah my baby is selalu so good mau main kemanapun.','3/4','tall'],
-['10/10','Melet','Mau dibilang fetish Abby melet pun Abby 100% setuju.','1/1',''],
-['11/10','Cat-like Person','Kucing manisku yang Abby sayang.','1/1',''],
-['10/10','Rambut','Rambut lurus pacarku, yang akan Abby selalu mainin kalau nanti udah ketemu.','1/1','']];
+['∞/10','Bibir Manyun','Sayang, Abby suka banget sama bibir seksi my baby.','4/3',''],
+['∞/10','Selalu Cantik','Bahkan sebelum ketemu Abbypun my baby so cantik aaaa.','1/1',''],
+['∞/10','Brand Ambassador','JKT48? Apa itu, ini dia Brand Ambassador Pocari Abby.','3/4','tall'],
+['∞∞/10','Anniversary Day','Ini my baby di hari anniversary kita yang pertama.','4/3','big'],
+['∞∞∞/10','Candid VC','Melihat my baby dari layar HP, gak ada yang lebih membuat Abby bahagia.','1/1',''],
+['∞∞∞/10','Master Tiktok','Mana ada orang lain bikin Tiktok semahir cewekku?.','1/1',''],
+['∞∞∞/10','Ms. Kacamata','Intinya kacamata, mama udahlah.','4/3',''],
+['∞/10','Outfit of the Day','My baby racikan outfitnya so great, Abby sangat bangga lah my baby is selalu so good mau main kemanapun.','3/4','tall'],
+['∞∞∞/10','Melet','Mau dibilang fetish Abby melet pun Abby 100% setuju.','1/1',''],
+['∞∞/10','Cat-like Person','Kucing manisku yang Abby sayang.','1/1',''],
+['∞/10','Rambut','Rambut lurus pacarku, yang akan Abby selalu mainin kalau nanti udah ketemu.','1/1','']];
 const PROPHECIES=['Proses skripsian Ais akan berjalan selalu lancar sampai wisuda.','Abby dan Ais tahun depan akan ketemu dan semakin dekat bersama','Abby dan Ais mendapatkan rezeki yang banyak dan kesehatan yang berlimpah'];
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 /* Gambar fleksibel: tulis nama file TANPA ekstensi, script mencoba format ini secara berurutan */
