@@ -61,10 +61,17 @@
    <div class="stat"><span>Skor</span><b id="score">0</b></div>
    <div class="stat"><span>High Score</span><b id="best">0</b></div>
    <div class="stat"><span>Combo</span><b id="combo">x0</b></div>
+   <div class="spells" id="spells">
+    <button class="spell" data-s="accio" title="Tukar satu balok dengan yang baru"><b>Accio</b><small>Tukar balok</small><i>2</i></button>
+    <button class="spell" data-s="reparo" title="Urungkan langkah terakhir"><b>Reparo</b><small>Urungkan</small><i>2</i></button>
+    <button class="spell" data-s="evanesco" title="Hapus area 3×3 di papan"><b>Evanesco</b><small>Hapus 3×3</small><i>1</i></button>
+    <button class="spell" data-s="wingardium" title="Putar satu balok"><b>Wingardium</b><small>Putar balok</small><i>3</i></button>
+   </div>
+   <small id="smode"></small>
    <button class="btn ghost" id="restart">Main Ulang</button>
    <button class="btn" id="unlock" data-go="5" disabled>Lanjut ke Chapter 5</button>
    <button class="link" data-go="5">Lewati kelas (Buka langsung)</button>
-   <small>Tombol terbuka otomatis di skor 250.</small>
+   <small id="unote">Tombol terbuka otomatis di skor 250.</small>
   </div>
   <canvas id="game"></canvas>
  </div>
