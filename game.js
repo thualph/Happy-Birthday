@@ -1,4 +1,5 @@
 (()=>{
+const UNLOCK=1000; /* <<< SKOR MINIMAL untuk membuka Chapter 5, ubah angka ini */
 const cv=document.getElementById('game'),cx=cv.getContext('2d'),W=520,H=660,C=58,BX=28,BY=16,TY=572,TC=24,N=8;
 cv.width=W;cv.height=H;
 const COL=['#E28FAD','#7FA88C','#E9DCC4','#4A2030'],WORDS=['Wingardium!','Brilliant!','Expecto!','Lumos Maxima!'];
@@ -16,6 +17,7 @@ function anyFit(m){for(let y=0;y<N;y++)for(let x=0;x<N;x++)if(fits(m,x,y))return
 const $=id=>document.getElementById(id);
 let g,pcs,score,best=+localStorage.getItem('bb_best')||0,drag,over,anim,parts,texts,streak=0,miss=0,rips=[];
 $('best').textContent=best;
+const hint=document.querySelector('.panel small');if(hint)hint.textContent=`Tombol terbuka otomatis di skor ${UNLOCK}.`;
 const rnd=a=>a[Math.random()*a.length|0];
 function newSet(){let set;
  for(let t=0;t<30;t++){set=[];
@@ -28,7 +30,7 @@ function newSet(){let set;
  pcs=set}
 function reset(){g=Array.from({length:N},()=>Array(N).fill(null));score=0;drag=null;over=false;anim={};parts=[];texts=[];streak=0;miss=0;rips=[];newSet();ui()}
 function ui(){$('score').textContent=score;const cb=$('combo');if(cb)cb.textContent='x'+streak;if(score>best){best=score;localStorage.setItem('bb_best',best);$('best').textContent=best}
- if(score>=250){const u=$('unlock');u.disabled=false;u.classList.add('ready')}}
+ if(score>=UNLOCK){const u=$('unlock');u.disabled=false;u.classList.add('ready')}}
 function fits(m,gx,gy){for(let r=0;r<m.length;r++)for(let c=0;c<m[0].length;c++)if(m[r][c]){const y=gy+r,x=gx+c;if(y<0||x<0||y>=N||x>=N||g[y][x])return false}return true}
 function canAny(){return pcs.some(p=>!p.used&&(()=>{for(let y=0;y<N;y++)for(let x=0;x<N;x++)if(fits(p.m,x,y))return true;return false})())}
 function full(grid){const R=[],K=[];for(let i=0;i<N;i++){if(grid[i].every(v=>v))R.push(i);if(grid.every(r=>r[i]))K.push(i)}return[R,K]}

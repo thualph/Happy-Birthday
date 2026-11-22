@@ -1,23 +1,23 @@
 /* ===== KONFIGURASI (edit di sini) ===== */
-const CFG={nama:'Nama Kamu',umur:'17',tanggal:'1 Januari 2027'};
-const REASONS=['Senyummu bisa menerangi ruangan lebih terang dari mantra Lumos.','Kamu pendengar terbaik yang pernah kukenal.','Tawamu membuat hari buruk terasa ringan.','Kamu berani tetap lembut di dunia yang sibuk.','Caramu peduli pada hal-hal kecil itu istimewa.','Kamu membuat orang lain merasa dilihat.','Ceritamu selalu membuatku ingin tinggal lebih lama.','Kamu kuat, bahkan saat tidak merasa begitu.','Ada keajaiban di caramu menjadi dirimu sendiri.','Dunia sedikit lebih hangat karena ada kamu.'];
+const CFG={nama:'Ais',umur:'21',tanggal:'23 November 2005'};
+const REASONS=['Ais adalah pendengar terbaik yang pernah Abby kenal.','You deserve the love of the world.','Suara my baby selalu bikin Abby luluh dan tenang','Ais adalah orang paling berani sama paling kuat di dunia ini.','Senyum my baby sangat manis seperti yupi plus karamel.','You are just never giving up, even when all things goes bad.','Ide dan saran-saran my baby selalu yang Abby nantikan.'];
 const PHOTOS=[/* [skor, judul, review, rasio placeholder untuk lightbox, ukuran tile bento: 'big' | 'tall' | 'wide' | ''] - 16 foto, foto asli dipotong (cover) di tile, lightbox menampilkan utuh */
-['10/10','Hari Pertama Kita','Foto ini bukti kamu selalu tampil paling bersinar. Aku ingat betul tawanya.','4/3','big'],
-['10/10','Senyum Favorit','Ekspresi ini langsung mengubah mood seisi ruangan.','1/1',''],
-['9.9/10','Petualangan Seru','Ratu petualangan. Aku ikut ke mana pun kamu pergi.','4/5',''],
-['10/10','Momen Manis','Sederhana tapi hangat, seperti secangkir butterbeer di musim dingin.','3/4','tall'],
-['10/10','Gaya Tak Tertandingi','Ada yang bisa berpose sekeren ini tanpa usaha? Hanya kamu.','4/3',''],
-['11/10','Selalu Cantik','Skor ini sengaja melebihi batas karena kamu memang istimewa.','1/1',''],
-['10/10','Tawa Lepas','Tawamu bikin semua orang di sekitarmu ikut bahagia.','3/4','tall'],
-['9.8/10','Hari Santai','Bahkan saat santai, kamu tetap yang paling bersinar.','4/3','big'],
-['10/10','Candid Terbaik','Foto yang tidak direncanakan selalu paling jujur.','1/1',''],
-['10/10','Tatapan Sihir','Satu tatapan dan mantranya langsung bekerja.','1/1',''],
-['9.9/10','Si Penjelajah','Kamu selalu berani mencoba hal-hal baru.','4/3',''],
-['10/10','Outfit of the Day','Penyihir paling modis di seluruh Hogwarts.','3/4','tall'],
-['10/10','Pelukan Hangat','Bagian favoritku dari hari itu.','1/1',''],
-['11/10','Momen Favoritku','Kalau bisa diulang, aku pilih yang satu ini.','1/1',''],
-['10/10','Sampai Jumpa Lagi','Penutup manis untuk semua kenangan tahun ini.','1/1','']];
-const PROPHECIES=['Tahun ini bintang akan menyusun jalan menuju kejutan yang sudah lama kamu tunggu.','Seseorang yang kamu sayangi akan membawa kabar baik sebelum bulan purnama berikutnya.','Keberanian kecilmu hari ini akan tumbuh menjadi cerita besar yang kamu banggakan.'];
+['10/10','Foto Pertama Ais','Ini foto pertama yang Ais kirim ke Abby','4/3','big'],
+['10/10','Pandang Pertama','Foto di telegram yang bikin Abby so crazy.','1/1',''],
+['9.9/10','Motong Rambut','Abby suka banget liat foto ini, Ais seperti bidadari.','4/5',''],
+['👅/10','Like Sugar On My Tongue','Foto ini yang paling banyak ngabisin cairan George.','3/4','tall'],
+['10/10','Bibir Manyun','Sayang, Abby suka banget sama bibir seksi my baby.','4/3',''],
+['11/10','Selalu Cantik','Bahkan sebelum ketemu Abbypun my baby so cantik aaaa.','1/1',''],
+['10/10','Brand Ambassador','JKT48? Apa itu, ini dia Brand Ambassador Pocari Abby.','3/4','tall'],
+['9.8/10','Anniversary Day','Ini my baby di hari anniversary kita yang pertama.','4/3','big'],
+['10/10','Candid VC','Melihat my baby dari layar HP, gak ada yang lebih membuat Abby bahagia.','1/1',''],
+['10/10','Master Tiktok','Mana ada orang lain bikin Tiktok semahir cewekku?.','1/1',''],
+['9.9/10','Ms. Kacamata','Intinya kacamata, mama udahlah.','4/3',''],
+['10/10','Outfit of the Day','My baby racikan outfitnya so great, Abby sangat bangga lah my baby is selalu so good mau main kemanapun.','3/4','tall'],
+['10/10','Melet','Mau dibilang fetish Abby melet pun Abby 100% setuju.','1/1',''],
+['11/10','Cat-like Person','Kucing manisku yang Abby sayang.','1/1',''],
+['10/10','Rambut','Rambut lurus pacarku, yang akan Abby selalu mainin kalau nanti udah ketemu.','1/1','']];
+const PROPHECIES=['Proses skripsian Ais akan berjalan selalu lancar sampai wisuda.','Abby dan Ais tahun depan akan ketemu dan semakin dekat bersama','Abby dan Ais mendapatkan rezeki yang banyak dan kesehatan yang berlimpah'];
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 /* Gambar fleksibel: tulis nama file TANPA ekstensi, script mencoba format ini secara berurutan */
 const EXT=['webp','jpg','jpeg','png','gif','avif','JPG','JPEG','PNG'];
@@ -37,14 +37,16 @@ window.confetti=(n=170,x=innerWidth/2,y=innerHeight/2)=>{const c=['#F4C2D7',getC
 /* Navigasi, fullscreen & musik */
 const bgm=$('#bgm');let cur=0;
 let busy=false;const train=$('#train');
-function placeTrain(n){train.style.opacity=n?1:0;train.style.transform=`translateX(${innerWidth*(.04+.96*n/8)-train.offsetWidth}px)`}
+function placeTrain(n){train.style.opacity=n?1:0;train.style.transform=`translateX(${innerWidth*(.04+.96*n/9)-train.offsetWidth}px)`}
 function go(n){if(busy||n===cur)return;const from=$('#p'+cur),to=$('#p'+n);busy=true;
  document.documentElement.style.setProperty('--d',n>cur?1:-1);
  from.classList.remove('on');from.classList.add('out');to.classList.add('on','in');
  const w=$('#whoosh');w.classList.remove('go');void w.offsetWidth;w.classList.add('go');
- train.classList.add('run');placeTrain(n);cur=n;$('#chap').textContent=`Chapter ${n} / 8`;
+ train.classList.add('run');placeTrain(n);cur=n;$('#chap').textContent=`Chapter ${n} / 9`;syncBack();
  setTimeout(()=>{from.classList.remove('out');to.classList.remove('in');train.classList.remove('run');busy=false},1150)}
 placeTrain(0);addEventListener('resize',()=>placeTrain(cur));
+function syncBack(){const b=$('#back');b.hidden=cur<2;b.textContent='‹ Chapter '+(cur-1)}
+$('#back').onclick=()=>go(cur-1);
 document.addEventListener('click',e=>{const b=e.target.closest('[data-go]');if(b&&!b.disabled)go(+b.dataset.go)});
 $('#enter').onclick=async()=>{
  try{if(!document.fullscreenElement)await document.documentElement.requestFullscreen()}catch(err){}

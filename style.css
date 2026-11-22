@@ -179,3 +179,27 @@ background:repeating-linear-gradient(180deg,transparent 0 41px,rgba(197,160,89,.
 @keyframes spin{to{transform:rotate(360deg)}}
 .puff{fill:var(--gold);opacity:0;transform-box:fill-box;transform-origin:center;animation:puff 2.7s ease-out infinite}
 @keyframes puff{0%{opacity:0;transform:translate(0,0) scale(.4)}15%{opacity:.9}100%{opacity:0;transform:translate(-110px,-90px) scale(2.4)}}
+
+/* Tombol kembali ke chapter sebelumnya */
+#back{top:26px;right:calc(50% + 72px);font:700 13px var(--sans);color:var(--wine);background:var(--cream);padding:4px 16px;border:1px solid var(--gold);cursor:pointer;transition:background .25s,transform .25s}
+#back:hover{background:var(--pink);transform:translateX(-3px)}
+
+/* ===== Chapter 5: History of Magic - Crossword (senada Block Blast) ===== */
+.xwrap{display:flex;gap:28px;align-items:flex-start;justify-content:center}.xwrap .panel{width:230px;margin-top:6px}
+#xboard{display:grid;gap:3px;padding:12px;background:#F6EFE6;border:1px solid var(--gold);border-radius:12px;box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--gold),0 10px 30px rgba(74,32,48,.15)}
+.xc{position:relative;width:42px;height:42px}
+.xc input{width:100%;height:100%;padding:0;border:1px solid rgba(197,160,89,.55);border-radius:8px;background:rgba(184,216,194,.35);text-align:center;font:700 21px var(--head);color:var(--wine);text-transform:uppercase;caret-color:transparent;outline:none;cursor:pointer;transition:background .2s,box-shadow .2s}
+.xc.w input{background:rgba(244,194,215,.6)}
+.xc.cur input{background:#FFF7D6;box-shadow:0 0 0 2px var(--gold),0 0 14px rgba(197,160,89,.6)}
+.xn{position:absolute;top:2px;left:5px;font:800 9px var(--sans);color:var(--wine);pointer-events:none}
+.xc.ok input{background:var(--sage);color:var(--ink);animation:xflash .7s var(--dl,0s) both}
+.xc.bad input{background:rgba(226,143,173,.6);animation:xshake .4s}
+@keyframes xflash{0%{transform:scale(1);background:#FFF7D6}40%{transform:scale(1.18);background:#FFF1C2;box-shadow:0 0 16px rgba(197,160,89,.9)}100%{transform:scale(1)}}
+@keyframes xshake{20%,60%{transform:translateX(-4px)}40%,80%{transform:translateX(4px)}}
+#xboard.xwin{animation:xglow 1.4s ease-in-out 2}
+@keyframes xglow{50%{box-shadow:0 0 0 4px var(--cream),0 0 0 5px var(--gold),0 0 50px rgba(230,205,148,.95)}}
+#xclues{width:300px;max-height:min(70vh,560px);overflow-y:auto;background:var(--cream);border:1px solid var(--gold);outline:1px solid var(--gold);outline-offset:-5px;padding:16px 18px;text-align:left;scrollbar-width:thin;scrollbar-color:var(--gold) transparent}
+#xclues h4{font:700 17px var(--head);color:var(--wine);margin:2px 0 6px}#xclues h4:not(:first-child){margin-top:14px}
+.xk{display:flex;gap:8px;padding:6px 8px;border-radius:6px;cursor:pointer;font:500 13px/1.4 var(--sans);transition:background .2s}
+.xk b{color:var(--wine);min-width:16px}.xk small{color:var(--sage2);font-weight:700}.xk:hover{background:rgba(184,216,194,.35)}
+.xk.on{background:rgba(244,194,215,.55)}.xk.ok{color:var(--sage2);text-decoration:line-through}.xk.ok::after{content:"✓";color:var(--sage2);font-weight:800;margin-left:auto}

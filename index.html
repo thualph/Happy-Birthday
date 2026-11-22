@@ -10,7 +10,8 @@
 <div id="whoosh"></div>
 <i class="cn tl">❦</i><i class="cn tr">❦</i><i class="cn bl">❦</i><i class="cn br">❦</i>
 <div id="hud" hidden>
- <div id="chap">Chapter 1 / 8</div>
+ <div id="chap">Chapter 1 / 9</div>
+ <button id="back" title="Kembali ke chapter sebelumnya" hidden>‹ Chapter 1</button>
  <div id="dock" aria-label="Pilih asrama dan suara"><div id="houses"><button data-h="g" data-l="G" title="Gryffindor"><img src="assets/house-gryffindor.svg" alt="Gryffindor" onerror="this.remove()"></button><button data-h="s" data-l="S" title="Slytherin"><img src="assets/house-slytherin.svg" alt="Slytherin" onerror="this.remove()"></button><button data-h="r" data-l="R" title="Ravenclaw"><img src="assets/house-ravenclaw.svg" alt="Ravenclaw" onerror="this.remove()"></button><button data-h="h" data-l="H" title="Hufflepuff"><img src="assets/house-hufflepuff.svg" alt="Hufflepuff" onerror="this.remove()"></button></div><button id="mute" title="Mute / Unmute">♪</button></div>
 </div>
 
@@ -27,7 +28,7 @@
  <div class="hero2">
   <div class="hl">
    <p class="kick" id="kick">Special Birthday Edition</p>
-   <h1>Selamat Ulang Tahun,<br><em data-f="nama"></em>!</h1>
+   <h1>Selamat Ulang Tahun, <em data-f="nama"></em>!</h1>
    <img class="orn" src="assets/ornament-2.svg" alt="" onerror="this.remove()">
    <p class="date" data-f="tanggal"></p>
    <button class="btn" data-go="2">Lanjut ke Chapter 2</button>
@@ -56,7 +57,7 @@
  <h2>Charms Class: Block Blast Challenge</h2>
  <div class="gwrap">
   <div class="panel">
-   <p>Seret balok ke papan. Penuhi baris atau kolom untuk menghancurkannya.</p>
+   <p>Game favorit my baby. Should be easy, right?.</p>
    <div class="stat"><span>Skor</span><b id="score">0</b></div>
    <div class="stat"><span>High Score</span><b id="best">0</b></div>
    <div class="stat"><span>Combo</span><b id="combo">x0</b></div>
@@ -70,13 +71,30 @@
 </div></section>
 
 <section class="page" id="p5"><div class="wrap">
- <h2>Trelawney’s Birthday Prophecy: Divination Class</h2>
- <p class="sub">Pilih satu kartu. Takdir tahun barumu menunggu.</p>
- <div id="tarot"></div>
- <button class="btn" data-go="6">Lanjut ke Chapter 6</button>
+ <h2>History of Magic: Wizarding Crossword</h2>
+ <div class="xwrap">
+  <div class="panel">
+   <p>Kuis dunia sihir buat my baby. Ketik jawabannya dalam bahasa Inggris, ya!</p>
+   <div class="stat"><span>Kata Benar</span><b id="xdone">0 / 0</b></div>
+   <button class="btn ghost" id="xhint">Hint (buka 1 huruf)</button>
+   <button class="btn ghost" id="xreset">Main Ulang</button>
+   <button class="btn" id="xunlock" data-go="6" disabled>Lanjut ke Chapter 6</button>
+   <button class="link" data-go="6">Lewati kelas (Buka langsung)</button>
+   <small id="xnote"></small>
+  </div>
+  <div id="xboard"></div>
+  <div id="xclues"></div>
+ </div>
 </div></section>
 
 <section class="page" id="p6"><div class="wrap">
+ <h2>Trelawney’s Birthday Prophecy: Divination Class</h2>
+ <p class="sub">Pilih satu kartu. Takdir tahun barumu menunggu.</p>
+ <div id="tarot"></div>
+ <button class="btn" data-go="7">Lanjut ke Chapter 7</button>
+</div></section>
+
+<section class="page" id="p7"><div class="wrap">
  <h2>The Great Hall Feast: Make a Wish</h2>
  <p class="sub" id="cakehint">Klik lilin untuk meniupnya &amp; Make a Wish</p>
  <div class="cake" id="cake">
@@ -84,22 +102,22 @@
   <i class="candle" style="left:35%"><b class="flame"></b></i><i class="candle" style="left:49%"><b class="flame"></b></i><i class="candle" style="left:63%"><b class="flame"></b></i>
  </div>
  <div id="wishmsg">Happy Birthday! Semoga semua harapanmu terkabul. ✦</div>
- <button class="btn" data-go="7">Lanjut ke Chapter 7</button>
-</div></section>
-
-<section class="page" id="p7"><div class="wrap">
- <article class="paper">
-  <header><small>Hogwarts School of Witchcraft and Wizardry</small><h3>Special Owl Delivery</h3></header>
-  <p>Kepada <b data-f="nama"></b> tersayang,</p>
-  <p>Hari ini seorang burung hantu terbang jauh hanya untuk membawa satu pesan: terima kasih sudah menjadi kamu. Tahun lalu terasa lebih terang karena ada kamu di dalamnya.</p>
-  <p>Semoga usia <span data-f="umur"></span> penuh kejutan baik, tawa yang tidak habis, dan keberanian untuk mengejar mimpi yang paling kamu inginkan. Kamu pantas mendapatkan semua keajaiban itu.</p>
-  <p>Apa pun yang terjadi, ingat bahwa ada seseorang yang selalu bangga padamu dan siap mengirim burung hantu kapan saja kamu butuh.</p>
-  <p class="sig">Dengan penuh sayang,<br><em>Penyihir yang selalu di sisimu</em></p>
- </article>
  <button class="btn" data-go="8">Lanjut ke Chapter 8</button>
 </div></section>
 
 <section class="page" id="p8"><div class="wrap">
+ <article class="paper">
+  <header><small>Hogwarts School of Witchcraft and Wizardry</small><h3>Special Heyi Delivery</h3></header>
+  <p>Kepada <b data-f="nama"></b> tersayang,</p>
+  <p>Hari ini Heyi terbang jauh hanya untuk membawa satu pesan: terima kasih sudah menjadi kamu. Tahun lalu terasa lebih terang karena ada kamu di dalamnya.</p>
+  <p>Semoga di tahun ke <span data-f="umur"></span> hidup my baby penuh kejutan baik, cinta yang tidak pernah habis, dan keberanian dan kemudahan untuk Ais dalam mengerjar mimpi yang Ais paling inginkan.</p>
+  <p>Abby selalu bangga pada my baby Ais dan selalu mencintai Ais di segalapun waktu.</p>
+  <p class="sig">Dengan penuh sayang,<br><em>Abby yang selalu di sisimu</em></p>
+ </article>
+ <button class="btn" data-go="9">Lanjut ke Chapter 9</button>
+</div></section>
+
+<section class="page" id="p9"><div class="wrap">
  <h2>Room of Requirement: Mystery Blind Box</h2>
  <p class="sub" id="bbhint">Klik kotak 5 kali untuk membukanya (0 / 5)</p>
  <div class="bb" id="bb"><i class="bx"></i><i class="lid"></i></div>
@@ -107,5 +125,5 @@
 </div></section>
 
 <div id="modal" hidden><div class="mbox"><figure class="slot" id="mph" style="height:min(56vh,440px);aspect-ratio:4/5;max-width:46vw"></figure><div><span class="score" id="msc"></span><h3 id="mti"></h3><p id="mtx"></p><button class="btn ghost" id="mx">Tutup</button></div></div></div>
-<script src="script.js"></script><script src="game.js"></script>
+<script src="script.js"></script><script src="game.js"></script><script src="crossword.js"></script>
 </body></html>
